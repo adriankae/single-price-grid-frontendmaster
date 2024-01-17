@@ -1,3 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
 body {
     font-family: 'Karla', sans-serif;
     background-color: #DFEBE3;
@@ -18,6 +43,7 @@ main {
 
 .action-header p {
     color: #27A5A2;
+    font-weight: 700;
 }
 
 .action-subheader p {
@@ -31,10 +57,7 @@ main {
 
 .price-frame {
     display: flex;
-    gap: 10px;
     align-items: center;
-    margin-top: 0px;
-    padding-top: 0px;
 }
 
 .price p {
@@ -52,24 +75,19 @@ main {
 }
 
 .price-container .price-subtitle p {
-    margin-top: 8px;
     color: #c3ffff;
 }
 
 button {
-    width: 260px;
     height: 48px;
-    margin-top: 18px;
     background-color: #b4dc26;
     border: none;
     color: #ffffb5;
     border-radius: 5px;
-    margin-bottom: 10px;
 }
 
 .about-container {
     background-color: #3eb3af;
-    padding: 5px 25px 10px 25px;
 }
 
 .about-heading {
@@ -87,10 +105,6 @@ ul {
     line-height: 1.5;
 }
 
-.action-container {
-    padding: 10px 25px 15px 25px;
-}
-
 .action-text p {
     line-height: 2;
     color: hsl(218, 22%, 67%);
@@ -102,7 +116,15 @@ ul {
 
 .price-container {
     background-color: #27A5A2;
-    padding: 10px 25px 15px 25px;
+}
+
+.about-heading p {
+    color: white;
+    font-weight: 700;
+}
+
+.price-header {
+    font-weight: 700;
 }
 
 @media screen and (max-width: 943px) {
@@ -114,9 +136,18 @@ ul {
     }    
 
     .action-container {
-        padding: 10px 25px 15px 25px;
+        height: 266px;
+        padding: 30px 25px 15px 25px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;;
+    }
+
+    .action-container, .price-container {
+        padding: 30px 25px 15px 25px;
+    }
+
+    .about-container {
+        padding: 25px  25px 15px 25px;
     }
 
     .about-container {
@@ -125,15 +156,44 @@ ul {
     }
 
     .action-text p {
-        font-size: 13px;
+        font-size: 12px;
+        margin-top: 20px;
+        line-height: 1.9;
+    }
+
+    .action-subheader {
+        margin-top: 20px;
     }
 
     .action-subheader p {
         font-size: 16px;
+        line-height: 1.25;
     }
 
     ul {
         font-size: 13px;
+        margin-top: 10px
+    }
+
+    .price-container {
+        height: 230px;
+    }
+
+    .price-frame {
+        margin-top: 10px;
+    }
+
+    button {
+        width: 260px;
+        margin-top: 25px;
+    }
+
+    .about-container {
+        height: 228px;
+    }
+
+    .billing p {
+        margin-left: 10px;
     }
 }
 
@@ -149,18 +209,55 @@ ul {
         grid-column-end: 3;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        padding: 45px 80px 45px 40px; 
+    }
+
+    .action-header {
+        font-weight: 700;
     }
 
     .action-subheader p {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 18px;
+    }
+
+    .action-text p {
+        font-size: 13px; 
+        margin-top: 10px;
+        line-height: 1.9;
     }
 
     .price-container {
         border-bottom-left-radius: 10px;
+        padding: 45px 40px 0px 40px; 
+    }
+
+    .price-frame {
+        margin-top: 10px;
+    }
+
+    .billing {
+        margin-left: 10px;
+    }
+
+    .price-subtitle {
+        font-size: 15px;
+    }
+
+    button {
+        margin-top: 25px;
+        width: 236px;
     }
 
     .about-container {
         border-bottom-right-radius: 10px;
+        padding: 45px 40px 0px 40px; 
+    }
+
+    ul {
+        font-size: 13px;
+        margin-top: 18px
     }
 }
 
